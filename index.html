@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решатель школьных задач</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">📚 Решатель школьных задач</h1>
+            <p class="subtitle">Загрузите фото задачи и получите подробное решение с помощью ИИ</p>
+        </header>
+
+        <main class="main">
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <div class="upload-icon">📷</div>
+                        <h3>Загрузите фото задачи</h3>
+                        <p>Перетащите изображение сюда или нажмите для выбора</p>
+                        <input type="file" id="fileInput" accept="image/*" hidden>
+                        <button class="upload-btn" type="button">
+                            Выбрать файл
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="preview-section" id="previewSection" style="display: none;">
+                    <div class="image-preview">
+                        <img id="previewImage" alt="Предварительный просмотр">
+                        <button class="remove-btn" id="removeBtn">✕</button>
+                    </div>
+                    <button class="solve-btn" id="solveBtn">
+                        <span class="btn-text">Решить задачу</span>
+                        <div class="spinner" id="spinner" style="display: none;"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="result-section" id="resultSection" style="display: none;">
+                <h3>Решение задачи:</h3>
+                <div class="result-content" id="resultContent"></div>
+                <button class="new-task-btn" id="newTaskBtn">Решить новую задачу</button>
+            </div>
+
+            <div class="error-section" id="errorSection" style="display: none;">
+                <div class="error-message" id="errorMessage"></div>
+                <button class="retry-btn" id="retryBtn">Попробовать снова</button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Powered by OpenRouter AI • Создано для помощи в обучении</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
